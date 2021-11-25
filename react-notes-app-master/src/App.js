@@ -26,7 +26,7 @@ const App = () => {
 
 	const [searchText, setSearchText] = useState('');
 
-	const [darkMode, setDarkMode] = useState(false);
+	
 
 	useEffect(() => {
 		const savedNotes = JSON.parse(
@@ -62,9 +62,9 @@ const App = () => {
 	};
 
 	return (
-		<div className={`${darkMode && 'dark-mode'}`}>
+		<div>
 			<div className='container'>
-				<Header handleToggleDarkMode={setDarkMode} />
+				<Header/>
 				<Search handleSearchNote={setSearchText} />
 				<NotesList
 					notes={notes.filter((note) =>
